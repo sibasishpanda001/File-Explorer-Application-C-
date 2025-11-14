@@ -126,24 +126,17 @@ After executing one command, sudo automatically turns off.
 
 💡 Note: Below are real outputs from the terminal showing how the tool evolved from Day 1 → Day 5.
 
-![ls command](ls command.png)
+![lscommand](screenshots/lscommand.png)
 
-📸 Day 2 — Directory Navigation
+![makinganddelete directory](screenshots/makinganddeletedirectory.png)
 
-(Insert Image Here)
+![copy and move](screenshots/copy and move.png)
 
-📸 Day 3 — File Manipulation
+![changeandshowfilepermission](screenshots/changeandshowfilepermission.png)
 
-(Insert Image Here)
+![deletecommand](screenshots/deletecommand.png)
 
-📸 Day 4 — File Search
-
-(Insert Image Here)
-
-📸 Day 5 — Permission Management
-
-(Insert Image Here)
-
+![sudocommand](screenshots/sudocommand.png)
 
 ---
 
