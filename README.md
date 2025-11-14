@@ -82,22 +82,22 @@ g++ -std=c++17 main.cpp -o explorer
 
 ---
 
-🧭 Usage Controls (Commands Guide)
+## 🧭 Usage Controls (Command Guide)
 
-Command	                Usage	               Description
-
-ls		                                       List files with color & permissions
-cd <dir>	             cd folderName	       Change directory
-mkdir <name>	         mkdir test	           Create a new folder
-rmdir <name>           rmdir test	           Remove directory (only if empty)
-del <file>	           del note.txt	         Delete a file
-cp <src> <dest>	       cp a.txt b.txt	       Copy file to destination
-mv <src> <dest>	       mv old new	           Move or rename file/directory
-chmod <file> <perm>	   chmod my.txt 755	     Change permissions (octal format)
-perm <file>	           perm my.txt	         Show assigned permissions
-sudo <cmd>	           sudo rm file.txt	     Bypass permission for 1 command
-help		                                     Show help menu
-exit		                                     Quit program
+| Command | Usage | Description |
+|--------|--------|-------------|
+| `ls` | `ls` | List files with color & permissions |
+| `cd <dir>` | `cd folderName` | Change directory |
+| `mkdir <name>` | `mkdir test` | Create a new folder |
+| `rmdir <name>` | `rmdir test` | Remove directory (only if empty) |
+| `del <file>` | `del note.txt` | Delete a file |
+| `cp <src> <dest>` | `cp a.txt b.txt` | Copy file to destination |
+| `mv <src> <dest>` | `mv old new` | Move or rename file/directory |
+| `chmod <file> <perm>` | `chmod my.txt 755` | Change permissions (octal format) |
+| `perm <file>` | `perm my.txt` | Show assigned permissions |
+| `sudo <cmd>` | `sudo del protected.txt` | Bypass permission for 1 command |
+| `help` | `help` | Show help menu |
+| `exit` | `exit` | Quit the program |
 
 ---
 
