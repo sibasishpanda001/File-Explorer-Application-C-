@@ -101,6 +101,20 @@ g++ -std=c++17 main.cpp -o explorer
 
 ---
 
+🌈 Color Coding
+Color
+Meaning
+🔵 Blue
+Directory
+🟢 Green
+Writable item
+🟡 Yellow
+Read-only file
+⚪ White
+Default/reset
+
+---
+
 📌 How Permissions Work
 
 > Each file/directory has a stored permission string example:
