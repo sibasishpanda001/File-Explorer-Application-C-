@@ -126,9 +126,7 @@ After executing one command, sudo automatically turns off.
 
 💡 Note: Below are real outputs from the terminal showing how the tool evolved from Day 1 → Day 5.
 
-📸 Day 1 — File Listing Output
-
-ls command.png
+![ls command](ls command.png)
 
 📸 Day 2 — Directory Navigation
 
