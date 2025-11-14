@@ -150,10 +150,9 @@ After executing one command, sudo automatically turns off.
 
 📁 File-Explorer-Application-C++
 │── main.cpp
-│── .permissions.txt   (auto-generated)
+│── .permissions.txt     (auto-generated)
 │── README.md
-│── screenshots/       (optional folder)
-
+│── screenshots/         (optional folder)
 
 ---
 
