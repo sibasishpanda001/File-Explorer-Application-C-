@@ -102,16 +102,12 @@ g++ -std=c++17 main.cpp -o explorer
 ---
 
 🌈 Color Coding
-Color
-Meaning
-🔵 Blue
-Directory
-🟢 Green
-Writable item
-🟡 Yellow
-Read-only file
-⚪ White
-Default/reset
+
+Color Meaning
+🔵 Blue Directory
+🟢 Green Writable item
+🟡 Yellow Read-only file
+⚪ White Default/reset
 
 ---
 
