@@ -1,21 +1,10 @@
 # File-Explorer-Application-C-
 
-Perfect!
-Here is your professional GitHub-ready README.md for:
-
-File Explorer Application (C++)
-
-You can copy–paste this directly into your repository.
-
-
----
-
 📁 File Explorer Application (C++)
 
 A Linux-style console-based File Explorer built in C++17 using <filesystem>, with support for file/directory operations, permission simulation, sudo override, and color-coded output — similar to a mini Linux shell.
 
 This project was developed as a 5-day Capstone Project, adding new features each day — ranging from listing files to full permission management.
-
 
 ---
 
@@ -46,41 +35,32 @@ To build a C++ console file explorer that interacts with the Linux file system, 
 Day 1 — Basic File Listing
 
 Setup project structure
-
 Display files & folders
-
 Add colored output based on file type & permissions
 
 
 Day 2 — Directory Navigation
 
 Add cd command
-
 Improve path handling
-
 Better error messages
 
 
 Day 3 — File Manipulation
 
 Add cp, mv, del, mkdir, rmdir
-
 Basic permission checks
 
 
 Day 4 — File Search
 
 Recursive search (if implemented)
-
 Pattern-based searching (optional)
-
 
 Day 5 — Permission Management
 
 Implement chmod
-
 Add .permissions.txt storing system
-
 Add fake sudo mode
 
 
@@ -90,30 +70,23 @@ Add fake sudo mode
 🛠 Installation & Compilation
 
 📌 Requirements
-
-Linux OS
-
-g++ with C++17 support
-
-Terminal access
-
+> Linux OS
+> g++ with C++17 support
+> Terminal access
 
 📌 Build
-
 g++ -std=c++17 main.cpp -o explorer
 
 📌 Run
-
 ./explorer
-
 
 ---
 
 🧭 Usage Controls (Commands Guide)
 
-Command	Usage	Description
+Command	              Usage	             Description
 
-ls		List files with color & permissions
+ls		                                   List files with color & permissions
 cd <dir>	cd folderName	Change directory
 mkdir <name>	mkdir test	Create a new folder
 rmdir <name>	rmdir test	Remove directory (only if empty)
@@ -126,45 +99,23 @@ sudo <cmd>	sudo rm file.txt	Bypass permission for 1 command
 help		Show help menu
 exit		Quit program
 
-
-
----
-
-🌈 Color Coding
-
-Color	Meaning
-
-🔵 Blue	Directory
-🟢 Green	Writable item
-🟡 Yellow	Read-only file
-⚪ White	Default color reset
-
-
-
 ---
 
 📌 How Permissions Work
 
-Each file/directory has a stored permission string example:
-
-drwxr-xr-x
--rw-r--r--
-
-Changing permissions with octal (e.g., 755) converts into full rwx format
-
-Permissions are saved into .permissions.txt
-
-These permissions simulate Linux permissions; actual OS permissions are not changed
-
-
+> Each file/directory has a stored permission string example:
+  drwxr-xr-x
+  -rw-r--r--
+> Changing permissions with octal (e.g., 755) converts into full rwx format
+> Permissions are saved into .permissions.txt
+> These permissions simulate Linux permissions; actual OS permissions are not changed
 
 ---
 
 🔐 Sudo Mode
 
 Sudo applies only for the next command:
-
-sudo del protected.txt
+   sudo del protected.txt
 
 After executing one command, sudo automatically turns off.
 
@@ -172,8 +123,6 @@ After executing one command, sudo automatically turns off.
 ---
 
 🖼 Screenshots
-
-(Add your screenshots below)
 
 📸 Day 1 — File Listing Output
 
@@ -224,13 +173,3 @@ Passionate about Linux systems, C++, Java & backend engineering.
 
 
 ---
-
-If you'd like, I can:
-
-✅ Create a PDF version of this README
-✅ Add badges (C++, Linux, MIT License, Build status)
-✅ Add logos/icons
-✅ Make it even more visually attractive
-
-Want the enhanced version?
-
