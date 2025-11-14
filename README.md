@@ -1,234 +1,236 @@
 # File-Explorer-Application-C-
-Here is a clean, professional, GitHub-ready README.md for your System Monitor Tool (C++) project — with proper formatting, sections, tables, emojis, and screenshot placeholders.
 
-You can copy–paste directly into your repository.
+Perfect!
+Here is your professional GitHub-ready README.md for:
 
+File Explorer Application (C++)
 
----
-
-🖥️ System Monitor Tool (C++)
-
-A lightweight real-time System Monitor written in C++17, inspired by the Linux top command.
-It displays live information about CPU usage, memory usage, running processes, and allows interactive process control using an ncurses UI.
-
-This project was built progressively over 5 days, with one major feature added each day.
+You can copy–paste this directly into your repository.
 
 
 ---
 
-⭐ Features
+📁 File Explorer Application (C++)
 
-✅ Display system uptime, memory usage, and load average
+A Linux-style console-based File Explorer built in C++17 using <filesystem>, with support for file/directory operations, permission simulation, sudo override, and color-coded output — similar to a mini Linux shell.
 
-✅ List running processes with CPU and memory metrics
+This project was developed as a 5-day Capstone Project, adding new features each day — ranging from listing files to full permission management.
 
-✅ Sort processes by CPU or memory usage
 
-✅ Kill processes interactively (SIGTERM or SIGKILL)
+---
 
-✅ Real-time refresh like top
+🚀 Features
 
-✅ Ncurses-based interactive UI
+✔ List files & directories with color-coded permission-style output
+✔ Navigate and manage directory structure
+✔ Create, delete, and move files & folders
+✔ Copy files (with overwrite support)
+✔ Simulated Linux-style permissions (rwx in octal format like 755)
+✔ .permissions.txt storage to keep custom permissions
+✔ “sudo mode” to bypass restrictions for one command
+✔ Error handling for invalid operations
+✔ Minimal and very fast — built entirely with modern C++17
 
-🔄 Smooth real-time updates every few seconds
+
+---
+
+🎯 Objective
+
+To build a C++ console file explorer that interacts with the Linux file system, enabling users to perform file management tasks similar to Linux command-line tools.
+
+
+---
+
+📅 Day-wise Development Progress
+
+Day 1 — Basic File Listing
+
+Setup project structure
+
+Display files & folders
+
+Add colored output based on file type & permissions
+
+
+Day 2 — Directory Navigation
+
+Add cd command
+
+Improve path handling
+
+Better error messages
+
+
+Day 3 — File Manipulation
+
+Add cp, mv, del, mkdir, rmdir
+
+Basic permission checks
+
+
+Day 4 — File Search
+
+Recursive search (if implemented)
+
+Pattern-based searching (optional)
+
+
+Day 5 — Permission Management
+
+Implement chmod
+
+Add .permissions.txt storing system
+
+Add fake sudo mode
 
 
 
 ---
 
-🎯 Project Objective
+🛠 Installation & Compilation
 
-Objective:
-Build a C++ system monitoring tool that behaves similarly to the Linux top command—showing real-time CPU/memory usage and providing process-level control.
+📌 Requirements
+
+Linux OS
+
+g++ with C++17 support
+
+Terminal access
+
+
+📌 Build
+
+g++ -std=c++17 main.cpp -o explorer
+
+📌 Run
+
+./explorer
 
 
 ---
 
-📅 Day-wise Progress
+🧭 Usage Controls (Commands Guide)
 
-Day 1 — UI Layout & System Data
+Command	Usage	Description
 
-Displayed uptime, load average, and memory details.
-
-
-Day 2 — Process Listing
-
-Listed running processes, CPU jiffies, and RSS memory usage.
-
-
-Day 3 — Sorting Feature
-
-Added sorting by CPU or memory:
-
---sort=cpu
-
---sort=mem
-
-
-
-Day 4 — Process Control
-
-Added interactive kill:
-
-k — SIGTERM
-
-K — SIGKILL
-
-
-
-Day 5 — Real-Time Ncurses UI
-
-Full ncurses interface
-
-Real-time CPU % calculation
-
-Live refresh + keyboard controls
+ls		List files with color & permissions
+cd <dir>	cd folderName	Change directory
+mkdir <name>	mkdir test	Create a new folder
+rmdir <name>	rmdir test	Remove directory (only if empty)
+del <file>	del note.txt	Delete a file
+cp <src> <dest>	cp a.txt b.txt	Copy file to destination
+mv <src> <dest>	mv old new	Move or rename file/directory
+chmod <file> <perm>	chmod my.txt 755	Change permissions (octal format)
+perm <file>	perm my.txt	Show assigned permissions
+sudo <cmd>	sudo rm file.txt	Bypass permission for 1 command
+help		Show help menu
+exit		Quit program
 
 
 
 ---
 
-🛠️ Installation
+🌈 Color Coding
 
-Prerequisites
+Color	Meaning
 
-Linux system
+🔵 Blue	Directory
+🟢 Green	Writable item
+🟡 Yellow	Read-only file
+⚪ White	Default color reset
 
-C++17 compiler (g++)
-
-Ncurses library
-
-
-Install Ncurses (Ubuntu/Debian)
-
-sudo apt update
-sudo apt install g++ libncurses-dev
 
 
 ---
 
-🔧 Build & Run
+📌 How Permissions Work
 
-Build (Day-5 final version)
+Each file/directory has a stored permission string example:
 
-g++ -std=c++17 sysmon.cpp -o sysmon -lncurses
+drwxr-xr-x
+-rw-r--r--
 
-Run
+Changing permissions with octal (e.g., 755) converts into full rwx format
 
-./sysmon 2
+Permissions are saved into .permissions.txt
 
-➡️ Refreshes every 2 seconds
-➡️ Press q to exit
+These permissions simulate Linux permissions; actual OS permissions are not changed
+
 
 
 ---
 
-🎮 Usage Controls
+🔐 Sudo Mode
 
-Keyboard Commands
+Sudo applies only for the next command:
 
-Key / Command	Function
+sudo del protected.txt
 
-s	Toggle sorting (CPU ↔ Memory)
-k	Prompt PID → kill process (SIGTERM)
-K	Prompt PID → force kill (SIGKILL)
-q	Quit program
-
-
-CLI Options
-
-Argument	Description
-
---sort=cpu	Sort by CPU (default)
---sort=mem	Sort by memory
-
-
-Example:
-
-./sysmon --sort=mem
+After executing one command, sudo automatically turns off.
 
 
 ---
 
-📘 Git Commit Log (Example)
+🖼 Screenshots
 
-git init
-git add sysmon.cpp
-git commit -m "Day 1: Basic UI layout and system info"
-git commit -m "Day 2: Process listing with CPU jiffies and memory"
-git commit -m "Day 3: Added sorting by CPU/memory"
-git commit -m "Day 4: Interactive process kill functionality"
-git commit -m "Day 5: Real-time ncurses-based system monitor"
+(Add your screenshots below)
 
+📸 Day 1 — File Listing Output
 
----
+(Insert Image Here)
 
-🖼️ Screenshots
+📸 Day 2 — Directory Navigation
 
-> 📌 (Upload your actual images in the repository and replace the placeholders below.)
+(Insert Image Here)
 
+📸 Day 3 — File Manipulation
 
+(Insert Image Here)
 
-Day 1 – Basic System Info
+📸 Day 4 — File Search
 
-![Day1 Output](screenshots/day1.png)
+(Insert Image Here)
 
+📸 Day 5 — Permission Management
 
----
-
-Day 2 – Process Listing
-
-![Day2 Output](screenshots/day2.png)
+(Insert Image Here)
 
 
 ---
 
-Day 3 – Sorted Process List
+📚 Project Structure
 
-![Day3 Output 1](screenshots/day3-1.png)
-![Day3 Output 2](screenshots/day3-2.png)
-
-
----
-
-Day 4 – Process Kill Feature
-
-![Day4 Output 1](screenshots/day4-1.png)
-![Day4 Output 2](screenshots/day4-2.png)
-![Day4 Output 3](screenshots/day4-3.png)
-
-
----
-
-Day 5 – Real-Time Ncurses Monitor
-
-![Day5 Output 1](screenshots/day5-1.png)
-![Day5 Output 2](screenshots/day5-2.png)
-![Day5 Output 3](screenshots/day5-3.png)
-![Day5 Output 4](screenshots/day5-4.png)
+📁 File-Explorer-Application-C++
+│── main.cpp
+│── .permissions.txt   (auto-generated)
+│── README.md
+│── screenshots/       (optional folder)
 
 
 ---
 
 📄 License
 
-This project is released under the MIT License.
+This project is open-source and available under the MIT License.
 
 
 ---
 
-👨‍💻 Author
+👤 Author
 
 Hiranmaya Panda
 Final Year B.Tech (Computer Science)
-Passionate about backend development, system programming, system design, C++ & Java.
+Passionate about Linux systems, C++, Java & backend engineering.
 
 
 ---
 
-If you want, I can also:
-✨ Add stylish GitHub badges
-✨ Add ASCII logo or banner
-✨ Generate a PDF version of this README
+If you'd like, I can:
 
-Just tell me!
+✅ Create a PDF version of this README
+✅ Add badges (C++, Linux, MIT License, Build status)
+✅ Add logos/icons
+✅ Make it even more visually attractive
+
+Want the enhanced version?
+
