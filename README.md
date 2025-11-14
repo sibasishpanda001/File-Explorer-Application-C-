@@ -126,7 +126,7 @@ After executing one command, sudo automatically turns off.
 
 💡 Note: Below are real outputs from the terminal showing how the tool evolved from Day 1 → Day 5.
 
-![lscommand](screenshots/lscommand.png)
+![lscommand](lscommand.png)
 
 ![makinganddelete directory](screenshots/makinganddeletedirectory.png)
 
