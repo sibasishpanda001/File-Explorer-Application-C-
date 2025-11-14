@@ -167,9 +167,7 @@ This project is open-source and available under the MIT License.
 
 👤 Author
 
-Hiranmaya Panda
+Sibasish Panda
 Final Year B.Tech (Computer Science)
-Passionate about Linux systems, C++, Java & backend engineering.
-
 
 ---
