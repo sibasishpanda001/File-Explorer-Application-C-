@@ -128,15 +128,21 @@ After executing one command, sudo automatically turns off.
 
 ![lscommand](lscommand.png)
 
-![makinganddelete directory](screenshots/makinganddeletedirectory.png)
+![makinganddeletedirectory](makinganddeletedirectory.png)
 
-![copy and move](screenshots/copy and move.png)
+![copyandmove](copyandmove.png)
 
-![changeandshowfilepermission](screenshots/changeandshowfilepermission.png)
+![changeandshowfilepermission](changeandshowfilepermission.png)
 
-![deletecommand](screenshots/deletecommand.png)
+![deletecommand](deletecommand.png)
 
-![sudocommand](screenshots/sudocommand.png)
+![sudocommand](sudocommand.png)
+
+![RunningCommand](RunningCommand.png)
+
+![exit](exit.png)
+
+![help](help.png)
 
 ---
 
