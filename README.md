@@ -126,7 +126,7 @@ After executing one command, sudo automatically turns off.
 
 📸 Day 1 — File Listing Output
 
-(Insert Image Here)
+![Day 1 Output]()
 
 📸 Day 2 — Directory Navigation
 
